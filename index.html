@@ -132,7 +132,7 @@
         tasks = {};
         rows.forEach(row => {
           // row 구조: [author, title, date, timestamp]
-          const dateKey = row.date ? row.date.toString().substring(0, 10) : ''; 
+          const dateKey = String(row.date).trim().substring(0, 10);
           if (!tasks[dateKey]) {
             tasks[dateKey] = [];
           }
